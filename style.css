@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=The+Girl+Next+Door&display=swap');
+
+
+
+:root {
+  --background-color: rgb(19, 20, 36);
+  --red-dark-color: #E05151;
+  --red-light-color: #ED5757;
+  --gold-light-color: #F4CC65;
+  --gold-dark-color: #E6C162;
+
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+
+
+.lanternImage {
+  display: grid;
+  place-items: center;
+}
+.lanternImage h1 {
+  font-family: 'The Girl Next Door', cursive;
+  color: #c9a64f;
+  margin-top: -30vh;
+  font-weight: 200;
+  letter-spacing: 2px;
+  font-size: 3em;
+}
+
+#stringTiny1,
+#stringTiny2,
+#stringTiny3,
+#stringTiny4,
+#stringBottom {
+  stroke: var(--gold-dark-color);
+}
+
+#pearlOut {
+  fill: var(--gold-dark-color);
+}
+
+#rectangleBottom,
+#rectangleBottom2,
+#rectangleTop{
+  fill: var(--gold-light-color);
+}
+
+#stringTop {
+  stroke: var(--gold-light-color);
+}
+
+#pearlIn,
+#circle2,
+#circle4 {
+  fill: var(--red-light-color);
+}
+
+#circle1,
+#circle3 {
+  fill: var(--red-dark-color);
+}
+
+
+#balloon {
+  -webkit-filter: drop-shadow( 0px 0px 15px rgba(228, 212, 71, 0.795));
+  filter: drop-shadow( 0px 0px 15px rgba(228, 212, 71, 0.795));
+
+  animation: candleEffect 7s alternate infinite ease-in-out;
+}
+
+
+
+#ChineseLantern {
+
+  transform: translateY(-20px);
+
+  transition: all 1s ease;
+  transform-origin: top;
+  transform-box: fill-box;
+  display: inline-block;
+
+  animation: lanternMove 4s alternate infinite ease-in-out;
+}
+
+
+#bottomDecoration {
+  transition: all 1s ease;
+  transform-origin: top;
+  transform-box: fill-box;
+  display: inline-block;
+
+  animation: lanternMove 4s alternate infinite ease-in-out;
+}
+
+
+@keyframes lanternMove {
+  from {
+    transform:rotate(-10deg);
+
+  }
+  to {
+
+    transform:rotate(10deg);
+  }
+}
+
+@keyframes candleEffect {
+  0% {
+    -webkit-filter: drop-shadow( 0px 0px 15px rgba(228, 212, 71, 0.795));
+    filter: drop-shadow( 0px 0px 15px rgba(228, 212, 71, 0.795));
+
+  }
+  50% {
+    -webkit-filter: drop-shadow( 0px 0px 10px rgba(228, 212, 71, 0.795));
+    filter: drop-shadow( 0px 0px 10px rgba(228, 212, 71, 0.795));
+
+  }
+
+  75% {
+    -webkit-filter: drop-shadow( 0px 0px 15px rgba(228, 212, 71, 0.795));
+    filter: drop-shadow( 0px 0px 15px rgba(228, 212, 71, 0.795));
+  }
+
+  100% {
+    -webkit-filter: drop-shadow( 0px 0px 8px rgba(228, 212, 71, 0.795));
+    filter: drop-shadow( 0px 0px 8px rgba(228, 212, 71, 0.795));
+  }
+}
